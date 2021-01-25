@@ -1,0 +1,22 @@
+body {
+    background-color: #FFC341;
+  }
+
+img {
+    max-width: 35%;
+    max-height: auto;
+    align-items: center;
+}
+
+.jumbotron {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+
+  #devour-btn {
+      background-color: #FC2D3A;
+      border: none;
+      /* color: black; */
+  }

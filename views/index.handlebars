@@ -1,0 +1,47 @@
+    <div class="container-fluid">
+        <div class="jumbotron shadow" style="background-color: white;">
+    
+            <div class="row">
+                <img src="public\assets\img\burger.png" alt="burger drawing" class="mx-auto"><br>
+            </div>
+
+            <div class="row">
+                <h1 class="display-4 text-center mx-auto">Let's Eat!</h1><br>
+            </div>
+
+            <div class="row">
+                <div class="input-group input-group-large mb-3 mx-auto">
+                    <input id="burger" type="text" class="form-control" placeholder="Add to menu">
+                    <button type="submit" class="btn btn-success" id="add">
+                        Add burger
+                        </button>
+                </div>
+            </div>
+
+            <div class="row">
+                <ul class="col-lg-6 mx-auto">
+                    {{#each burgers}}
+                    {{#unless devoured}}
+
+                    <li class="list-group-item d-flex justify-content-between align-items-center" data-id="{{id}}">
+                        {{burger-name}}
+                        <span><button type="button" class="btn btn-danger btn-sm float-right pull-right" id="devour-btn" data-devoured="{{devoured}}">Devour</button></span>
+                        </li>
+                        {{/unless}}
+                        {{/each}}
+                </ul>
+
+                <ul class="col-lg-6 mx-auto" id="devoured">
+                    {{#each burgers}}
+                    {{#if devoured}}
+
+                    <li class="list-group-item disabled" data-id="{{id}}">
+                        {{burger_name}}
+                    </li>
+                    {{/if}}
+                    {{/each}}
+                </ul>
+
+            </div>
+        </div>
+    </div>

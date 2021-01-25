@@ -22,7 +22,7 @@ $(function () {
         event.preventDefault();
 
         let newBurger = {
-            name: $('#burger').val().trim(),
+            burger_name: $('#burger').val().trim(),
             devoured: false
         };
 

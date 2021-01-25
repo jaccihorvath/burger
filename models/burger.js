@@ -1,4 +1,4 @@
-const orm = require('../config/orm');
+const orm = require('../config/orm.js');
 
 let burger = {
     selectAll: function (cb) {
@@ -20,4 +20,4 @@ let burger = {
     }
 };
 
-module.eports = burger;
+module.exports = burger;

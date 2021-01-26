@@ -1,7 +1,8 @@
 const express = require('express');
-const router = express.Router();
-const burger = require('../models/burger.js');
 
+const router = express.Router();
+
+const burger = require('../models/burger.js');
 
 
 
@@ -21,7 +22,7 @@ router.post('/api/burgers', function (req, res) {
     ], [
         req.body.burger_name, req.body.devoured
     ], function (result) {
-        res.json({ id: result.insertId });
+        res.json({ id: result.id });
     });
 });
 
@@ -32,13 +33,12 @@ router.put('/api/burgers/:id', function (req, res) {
     console.log('condition', condition);
 
     burger.updateOne({
-        devoured: true
+        devoured: req.body.devoured
     }, condition, function (result) {
         if (result.changedRows === 0) {
             return res.status(404).end();
         } else {
             res.status(200).end();
-            // res.render('index');
         };
     });
 });

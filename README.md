@@ -31,7 +31,7 @@ node server.js
 
 For a more seamless experience, users are encouraged to [run the application online.](https://afternoon-brook-95200.herokuapp.com/)
 
-![burger-app](public/assets/img/burger-app.PNG)
+![burger-app](public/assets/img/burger-app.png)
 
 [Watch a video walkthrough of the application.](https://drive.google.com/file/d/1nToUxMmQu12wsBK-qmJ5VfjP2udoIgXS/view)
 

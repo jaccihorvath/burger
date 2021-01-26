@@ -11,7 +11,6 @@ $(function () {
             data: isDevoured
         }).then(
             function () {
-                console.log('this burger is now devoured!');
                 location.reload();
             }
         );

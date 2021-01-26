@@ -1,15 +1,14 @@
 $(function () {
     $('#devour-btn').on('click', function (event) {
         let id = $(this).data('id');
-        let isDevoured = $(this).data('devoured');
 
-        let nowDevoured = {
-            devoured: isDevoured
+        let isDevoured = {
+            devoured: true
         };
 
         $.ajax('/api/burgers/' + id, {
             type: 'PUT',
-            data: nowDevoured
+            data: isDevoured
         }).then(
             function () {
                 console.log('this burger is now devoured!');
@@ -22,8 +21,8 @@ $(function () {
         event.preventDefault();
 
         let newBurger = {
-            burger_name: $('#burger').val().trim(),
-            devoured: false
+            burger_name: $('#new-burger').val().trim(),
+            devoured: 0
         };
 
         $.ajax('/api/burgers', {
